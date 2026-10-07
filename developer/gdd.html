@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GDD — Dev | The Mansion</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+  <div id="dev-gate" class="gate">
+    <div class="gate-panel">
+      <p class="eyebrow">Accès restreint</p>
+      <h1>Espace développeur</h1>
+      <p>Entre le mot de passe pour lire le GDD.</p>
+      <form id="dev-gate-form">
+        <label for="dev-password">Mot de passe</label>
+        <input id="dev-password" name="password" type="password" autocomplete="current-password" required>
+        <p id="dev-gate-error" class="gate-error" role="alert"></p>
+        <div class="gate-actions">
+          <button class="btn btn-primary" type="submit">Entrer</button>
+          <a class="btn btn-ghost" href="../index.html">Retour au site</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="dev-shell" class="dev-shell" hidden>
+    <header class="page-header">
+      <a class="brand-mark" href="../index.html">The Mansion <span>· Dev</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Hub</a></li>
+          <li><a href="gdd.html" aria-current="page">GDD</a></li>
+          <li><button class="btn btn-ghost" type="button" data-dev-logout style="padding:0.4rem 0.75rem;font-size:0.75rem;">Quitter</button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <div class="dev-toolbar">
+        <div>
+          <p class="eyebrow">GDD v0.2</p>
+          <h1 style="margin-bottom:0;font-size:clamp(1.8rem,4vw,2.4rem);">Cahier des charges</h1>
+        </div>
+        <a class="btn btn-ghost" href="../gdd/README.md" target="_blank" rel="noopener">Fichiers bruts</a>
+      </div>
+
+      <div class="gdd-layout">
+        <nav aria-label="Sommaire GDD">
+          <ul id="gdd-nav" class="gdd-nav"></ul>
+        </nav>
+        <article id="md-content" class="md-body">
+          <p class="md-loading">Chargement…</p>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <span>The Mansion · GDD</span>
+      <a href="index.html">Hub développeur</a>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="../assets/js/dev-auth.js"></script>
+  <script src="../assets/js/render-md.js"></script>
+</body>
+</html>

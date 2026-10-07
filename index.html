@@ -4,31 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Mansion</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: Georgia, "Times New Roman", serif;
-      background: linear-gradient(to bottom right, #0a1628, #1a3a5c);
-      color: #f0e6d3;
-    }
-
-    h1 {
-      font-size: clamp(1.5rem, 4vw, 2.5rem);
-      font-weight: normal;
-      letter-spacing: 0.05em;
-    }
-  </style>
+  <meta name="description" content="The Mansion — jeu d'horreur Roblox. Explore le manoir, prépare le piège, capture le monstre.">
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-  <h1>The Mansion</h1>
+  <header class="site-header">
+    <a class="brand-mark" href="index.html">The Mansion</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="community/index.html">Communauté</a></li>
+        <li><a href="community/wiki/index.html">Wiki</a></li>
+        <li><a href="community/updates/index.html">Updates</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-silhouette" aria-hidden="true"></div>
+    <div class="hero-trees" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <h1 class="hero-brand">The Mansion</h1>
+      <p class="hero-tag">
+        Explore le manoir, loot, prépare le piège — et capture le monstre avant l’aube.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#" id="play-link" aria-disabled="true" title="Lien Roblox à venir">Jouer sur Roblox</a>
+        <a class="btn btn-ghost" href="community/index.html">Communauté</a>
+      </div>
+    </div>
+
+    <a class="hero-dev" href="developer/index.html">Espace développeur</a>
+  </main>
 </body>
 </html>
