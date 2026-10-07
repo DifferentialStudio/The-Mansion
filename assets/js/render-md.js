@@ -13,7 +13,7 @@
   ];
 
   function gddBaseUrl() {
-    return new URL("../gdd/", window.location.href);
+    return new URL("gdd/", window.location.href);
   }
 
   function currentDocId() {
@@ -55,7 +55,7 @@
 
     const entry = DOC_INDEX.find((d) => d.id === docId) || DOC_INDEX[0];
     renderNav(entry.id);
-    document.title = `${entry.label} — Dev | The Mansion`;
+    document.title = `${entry.label} — The Mansion`;
 
     target.innerHTML = '<p class="md-loading">Chargement…</p>';
 
@@ -78,14 +78,6 @@
   }
 
   function init() {
-    if (!window.TMDevAuth || !window.TMDevAuth.isUnlocked()) {
-      document.addEventListener(
-        "tm:dev-unlocked",
-        () => loadDoc(currentDocId()),
-        { once: true }
-      );
-      return;
-    }
     loadDoc(currentDocId());
   }
 

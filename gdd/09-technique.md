@@ -154,4 +154,4 @@ Même si hors alpha, noter tôt les contraintes :
 | Drive assets | `[À REMPLIR]` |
 | Board tâches | `[À REMPLIR]` |
 | Ce repo GDD | `gdd/` |
-| Site | racine du repo (GitHub Pages) |
+| Site (lecteur GDD) | `gdd.html` via GitHub Pages |
